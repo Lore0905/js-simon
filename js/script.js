@@ -16,7 +16,7 @@ for(let i = 0; i < 5; i++){
     numberArrayRandom.push(randomNumber);
 
 }
-console.log(numberArrayRandom);
+console.log('numeri random:  ' + numberArrayRandom);
 
 // creo un arrey dove sono presenti i numeri che ha inserito l'utente
 const numberArrayUser = [];
@@ -33,32 +33,29 @@ setTimeout(function(){
 
     // creo un ciclo for
     for(let i = 0; i < numberArrayRandom.length; i++){
+
         // creo 5 prompt
         let numberAnswers = parseInt( prompt('dimmi i numeri in ordine') );
         
         // pusho nell'array i valori della variabile numberAnswer
         numberArrayUser.push(numberAnswers);
 
-        if (numberArrayRandom === numberAnswers){
+        // confronto i numeri che ha inserito con i numeri presenti nell'array
+        numberArrayRandom.forEach((element) => {
 
-            userCorrectNumber.push(numberAnswers)
-        } 
-        else{
-            userWrongNumber.push(numberAnswers);
-        }
+            if( element === numberAnswers ){
+                userCorrectNumber.push(numberAnswers);
+            }
+            else{
+                userWrongNumber.push(numberAnswers);
+            }
+        });
+        
     };
-
     
-    
-    // confronto i numeri che ha inserito con i numeri presenti nell'array
-    
-    // se i numeri che ha inserito sono uguali a quelli dell'array allora ha vinto e scrivo che ha indovinato 5 numeri
-    
-    // altrimenti ha perso e scrivo i numeri che ha individuato e i numeri che ha sbagliato
-    
-    console.log(numberArrayUser);
-    console.log(userCorrectNumber);
-    console.log(userWrongNumber);
+    console.log("numeri inseriti dall'utente:  " + numberArrayUser);
+    console.log("numeri CORRETTI inseriti dall'utente:  " + userCorrectNumber);
+    console.log("numeri ERRATI inseriti dall'utente:  " + userWrongNumber);
     
 }, 1000);
 
