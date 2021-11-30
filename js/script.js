@@ -4,7 +4,7 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 // creo l'arrey dove conterrò i numeri generati automaticamente
-const numberArray = [];
+const numberArrayRandom = [];
 
 // creo un ciclo for che stampa un alert finche l'arrey creato contiene 5 numeri
 for(let i = 0; i < 5; i++){
@@ -13,17 +13,25 @@ for(let i = 0; i < 5; i++){
 
     let alertNumber = alert(randomNumber);
 
-    numberArray.push(randomNumber);
+    numberArrayRandom.push(randomNumber);
 
 }
-console.log(numberArray);
+console.log(numberArrayRandom);
+
+// creo un arrey dove sono presenti i numeri che ha inserito l'utente
+const numberArrayUser = [];
 
 // quando stampo l'ultimo alert faccio partire la funzione setTimeout che dura 30 secondi
 
 setTimeout(function(){
     // all'interno di questa funzione 
 
-        // tramite dei prompt chiedo all'utente di inserire i numeri che erano presenti negli alert
+    // creo un ciclo for
+    for(let i = 0; i < numberArrayUser.lenght; i++){
+        // creo 5 prompt
+        let numberAnswers = parseInt( prompt('dimmi i numeri in ordine'));
+        console.log(numberAnswers);
+    };
 
         // confronto i numeri che ha inserito con i numeri presenti nell'array
 
