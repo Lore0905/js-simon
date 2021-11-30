@@ -21,27 +21,47 @@ console.log(numberArrayRandom);
 // creo un arrey dove sono presenti i numeri che ha inserito l'utente
 const numberArrayUser = [];
 
+// creo l'arrey in cui vengono inseriti SOLO i numeri corretti che ha scritto l'utente
+const userCorrectNumber = [];
+// creo l'arrey in cui vengono inseriti SOLO i numeri corretti che ha scritto l'utente
+const userWrongNumber = [];
+
 // quando stampo l'ultimo alert faccio partire la funzione setTimeout che dura 30 secondi
 
 setTimeout(function(){
     // all'interno di questa funzione 
 
     // creo un ciclo for
-    for(let i = 0; i < numberArrayRandom.lenght; i++){
+    for(let i = 0; i < numberArrayRandom.length; i++){
         // creo 5 prompt
         let numberAnswers = parseInt( prompt('dimmi i numeri in ordine') );
-        console.log(numberAnswers);
+        
+        // pusho nell'array i valori della variabile numberAnswer
+        numberArrayUser.push(numberAnswers);
+
+        if (numberArrayRandom === numberAnswers){
+
+            userCorrectNumber.push(numberAnswers)
+        } 
+        else{
+            userWrongNumber.push(numberAnswers);
+        }
     };
 
-
-        // confronto i numeri che ha inserito con i numeri presenti nell'array
-
-            // se i numeri che ha inserito sono uguali a quelli dell'array allora ha vinto e scrivo che ha indovinato 5 numeri
-
-            // altrimenti ha perso e scrivo i numeri che ha individuato e i numeri che ha sbagliato
     
+    
+    // confronto i numeri che ha inserito con i numeri presenti nell'array
+    
+    // se i numeri che ha inserito sono uguali a quelli dell'array allora ha vinto e scrivo che ha indovinato 5 numeri
+    
+    // altrimenti ha perso e scrivo i numeri che ha individuato e i numeri che ha sbagliato
+    
+    console.log(numberArrayUser);
+    console.log(userCorrectNumber);
+    console.log(userWrongNumber);
     
 }, 1000);
+
 
 
 
