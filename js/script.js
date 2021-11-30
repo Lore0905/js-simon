@@ -27,11 +27,12 @@ setTimeout(function(){
     // all'interno di questa funzione 
 
     // creo un ciclo for
-    for(let i = 0; i < numberArrayUser.lenght; i++){
+    for(let i = 0; i < numberArrayRandom.lenght; i++){
         // creo 5 prompt
-        let numberAnswers = parseInt( prompt('dimmi i numeri in ordine'));
+        let numberAnswers = parseInt( prompt('dimmi i numeri in ordine') );
         console.log(numberAnswers);
     };
+
 
         // confronto i numeri che ha inserito con i numeri presenti nell'array
 
