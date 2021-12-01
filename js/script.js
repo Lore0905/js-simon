@@ -56,8 +56,20 @@ setTimeout(function(){
     console.log("numeri inseriti dall'utente:  " + numberArrayUser);
     console.log("numeri CORRETTI inseriti dall'utente:  " + userCorrectNumber);
     console.log("numeri ERRATI inseriti dall'utente:  " + userWrongNumber);
+
+    let finalmex;
+
+    if ( userCorrectNumber.length === 1){
+        finalmex = alert( `hai indovinato un numero, il numero che hai indovinato è: ${userCorrectNumber}` )
+    } 
+    else {
+        finalmex = alert( `hai indovinato ${userCorrectNumber.length} numeri, i numeri che hai indovinato sono: ${userCorrectNumber}` )
+    }
     
 }, 1000);
+
+
+
 
 
 
